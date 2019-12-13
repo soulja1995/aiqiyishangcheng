@@ -123,8 +123,9 @@ header {
   position: relative;
 }
 .drop_down img {
-  width: 1400px;
+  width: 100%;
   margin: 0 auto;
+  display: block;
 }
 .drop_down .big_img {
   height: 300px;
@@ -146,7 +147,17 @@ header {
   color: white;
   cursor: pointer;
 }
-.drop_down span::after {
+.drop_down .drop_open::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 0px;
+}
+.drop_down .drop_off::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -156,17 +167,190 @@ header {
   right: 0;
   background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 -15px;
 }
+.drop_down .drop_open {
+  display: none;
+}
+.drop_down .drop_off {
+  display: none;
+}
 
 .logo_search {
   width: 100%;
   height: 130px;
-  background: yellowgreen;
+  padding-top: 37px;
 }
-.logo_search .search_area {
+
+.search_area {
   width: 1200px;
-  height: 50px;
-  background: yellow;
   margin: 0 auto;
+  margin-bottom: 30px;
+}
+.search_area .logo {
+  float: left;
+}
+.search_area .search {
+  float: left;
+  width: 664px;
+  height: 60px;
+  padding-left: 154px;
+}
+.search_area .search .top_search {
+  border: 1px solid #ee394b;
+  height: 36px;
+}
+.search_area .search .top_search .search_box {
+  width: 396px;
+  border: 0;
+  background: #fff;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #999;
+  height: 34px;
+  line-height: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: 0;
+  float: left;
+}
+.search_area .search .top_search .start_seatch {
+  float: left;
+  width: 100px;
+  color: #fff;
+  border: 0;
+  background: #eb3b4a;
+  font-size: 20px;
+  height: 34px;
+  margin: 0;
+  float: right;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  outline: 0;
+  cursor: pointer;
+}
+.search_area .search .hot_search {
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+  margin-top: 10px;
+  color: #c7c7c7;
+  margin-left: -8px;
+}
+.search_area .search .hot_search li {
+  margin: 0 8px;
+  float: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+.search_area .search .hot_search span {
+  display: inline-block;
+  float: left;
+}
+.search_area .search .hot_search .hot_red {
+  color: red;
+}
+.search_area .search .hot_search li:hover {
+  color: red;
+}
+.search_area .ad_cut {
+  width: 209px;
+  height: 50px;
+  float: right;
+  position: relative;
+}
+.search_area .ad_cut div {
+  float: right;
+  width: 160px;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+.search_area .ad_cut div img {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.search_area .ad_cut div p {
+  margin: 8px 5px;
+  float: left;
+  font-size: 12px;
+  line-height: 5px;
+}
+.search_area .ad_cut .lighter {
+  display: none;
+}
+.search_area .ad_cut .glasses {
+  display: block;
+}
+.search_area .ad_cut .img_cut {
+  float: right;
+  margin: 31px 0 0 10px;
+  width: 39px;
+  height: 19px;
+  background: url(../img/arrow2.gif) no-repeat;
+  cursor: pointer;
+}
+
+.nav_case {
+  width: 100%;
+  background: #eb3b4a;
+  height: 40px;
+}
+.nav_case ul {
+  width: 1200px;
+  margin: 0 auto;
+}
+.nav_case ul li {
+  line-height: 37px;
+  float: left;
+  padding: 0 25px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 1s;
+}
+.nav_case ul li a {
+  color: white;
+}
+.nav_case ul li:first-child {
+  border-bottom: 3px solid #c90808;
+}
+.nav_case ul li:hover {
+  border-bottom: 3px solid #c90808;
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 280px;
+}
+.banner img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.banner .img_action {
+  display: block;
+}
+.banner ul {
+  position: absolute;
+  bottom: 22px;
+  text-align: center;
+  z-index: 2;
+  left: 50%;
+  bottom: 10px;
+  margin-left: -90px;
+}
+.banner ul li {
+  float: left;
+  cursor: pointer;
+  margin: 0 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.banner ul .red_action {
+  background: #eb3b4a;
 }
 
 /*# sourceMappingURL=demo.css.map */

@@ -1,0 +1,24 @@
+.nav_case{
+    width: 100%;
+    background: #eb3b4a;
+    height: 40px;
+    ul{
+        @include bx();
+        li{
+            line-height: 37px;
+            float: left;
+            padding: 0 25px;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 1s;
+            a{
+                color: white;
+            }
+        }
+        li:first-child{
+            border-bottom: 3px solid rgb(201, 8, 8);
+        }
+        li:hover{
+            border-bottom: 3px solid rgb(201, 8, 8);
+        }
+    }
+}

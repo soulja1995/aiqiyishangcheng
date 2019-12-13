@@ -2,8 +2,9 @@
     width: 100%;
     position: relative;
     img{
-        width: 1400px;
+        width: 100%;
         margin: 0 auto;
+        display: block;
     }
     .big_img{
         height: 300px;
@@ -25,7 +26,7 @@
         color: white;
         cursor: pointer;
     }
-    span::after{
+    .drop_open::after{
         content: "";
         width: 15px;
         height: 15px;
@@ -33,6 +34,22 @@
         position: absolute;
         top: 0;
         right: 0;
-        background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 -15px;;
+        background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 0px;
+    }
+    .drop_off::after{
+        content: "";
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 -15px;
+    }
+    .drop_open{
+        display: none;
+    }
+    .drop_off{
+        display: none;
     }
 }
