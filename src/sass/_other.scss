@@ -1,0 +1,7 @@
+@mixin bx {
+    width: 1200px;
+    margin: 0 auto;
+}
+@mixin tubiao ($x,$y){
+    background: url(../img/topMenu_redicon.png) no-repeat $x+px $y+px ;
+}

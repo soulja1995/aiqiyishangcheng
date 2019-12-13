@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 30px;
+  background: #f7f7f7;
+  color: #999;
+}
+
+.head {
+  width: 1200px;
+  margin: 0 auto;
+  height: 43px;
+}
+.head li {
+  float: left;
+  margin: 0 10px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 12px;
+}
+.head li a {
+  color: #999;
+}
+.head a:hover {
+  color: red;
+}
+.head a:hover span {
+  background-position-y: -20px;
+}
+.head a:hover .right_six {
+  background-position-y: 5px;
+  background-position-x: -89px;
+}
+
+.head_left {
+  float: left;
+}
+
+.head_right {
+  float: right;
+}
+.head_right li:last-child {
+  margin: 0;
+}
+.head_right .shop_num {
+  color: red;
+  font-weight: 900;
+}
+.head_right .shugang {
+  float: left;
+  width: 1px;
+  height: 10px;
+  background: #999;
+  display: inline-block;
+  margin: 12px 10px;
+}
+.head_right .right_one, .head_right .right_two, .head_right .right_three, .head_right .right_four, .head_right .right_five, .head_right .right_six {
+  width: 12px;
+  height: 12px;
+  margin-top: 2px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.head_right .right_one {
+  background: url(../img/topMenu_redicon.png) no-repeat -135px 0px;
+}
+.head_right .right_two {
+  background: url(../img/topMenu_redicon.png) no-repeat 0px 0px;
+}
+.head_right .right_three {
+  background: url(../img/topMenu_redicon.png) no-repeat -110px 0px;
+}
+.head_right .right_four {
+  background: url(../img/topMenu_redicon.png) no-repeat -40px 0px;
+}
+.head_right .right_five {
+  background: url(../img/topMenu_redicon.png) no-repeat -60px 0px;
+}
+.head_right .right_six {
+  background: url(../img/topMenu_redicon.png) no-repeat -74px 5px;
+}
+.head_right .aqy_code {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  padding: 10px;
+  display: none;
+}
+.head_right .aqy_code img {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+.head_right .aqy_code p {
+  width: 100px;
+  float: right;
+}
+.head_right li:nth-child(5):hover {
+  background: white;
+}
+.head_right li:nth-child(5):hover .aqy_code {
+  display: block;
+  color: #000;
+}
+
+.drop_down {
+  width: 100%;
+  position: relative;
+}
+.drop_down img {
+  width: 1400px;
+  margin: 0 auto;
+}
+.drop_down .big_img {
+  height: 300px;
+}
+.drop_down .small_img {
+  height: 50px;
+}
+.drop_down span {
+  width: 44px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  line-height: 15px;
+  z-index: 1;
+  background: rgba(126, 140, 206, 0.4);
+  padding-left: 5px;
+  color: white;
+  cursor: pointer;
+}
+.drop_down span::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../img/iqiyiMallPcIndexExpendTrans.png) no-repeat 0 -15px;
+}
+
+.logo_search {
+  width: 100%;
+  height: 130px;
+  background: yellowgreen;
+}
+.logo_search .search_area {
+  width: 1200px;
+  height: 50px;
+  background: yellow;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=demo.css.map */
