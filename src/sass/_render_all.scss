@@ -1,8 +1,12 @@
 .render_all{
     @include bx();
+    .adver_botoom{
+        margin: 20px 0;
+    }
     .adver_top{
         margin-top: 40px;
     }
+    
     .section_one,.section_two{  
         .section_top{
             height: 36px;
@@ -235,5 +239,8 @@
                 float: right;
             } 
         }
+    }
+    .adver_botoom{
+        margin: 15px 0;
     }
 }

@@ -33,4 +33,37 @@
             background: #eb3b4a;
         }
     }
+    span{
+        width: 66px;
+        display: block;
+        height: 66px;
+        position: absolute;
+        opacity: .0;
+        filter: alpha(opacity=0);
+        background-repeat: no-repeat;
+        top: 50%;
+        margin-top: -35px;
+        z-index: 10;
+        -webkit-transition: -webkit-opacity 500ms ease-out;
+        -moz-transition: -moz-opacity 500ms ease-out;
+        -o-transition: -o-opacity 500ms ease-out;
+        transition: opacity 500ms ease-out;
+        z-index: 4;
+    }
+    .ban_left{
+        left: 50%;
+        margin-left: -600px;
+        background: url(../img/new_focus_prev.png) no-repeat 0px 0px;
+        background-position: 0 0;
+    }
+    .ban_right{
+        right: 50%;
+        margin-right: -600px;
+        background: url(../img/new_focus_next.png) no-repeat 0px 0px;
+        background-position: 0 0;
+    }
+    &:hover span{
+        opacity : .7
+    }
 }
+

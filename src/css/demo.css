@@ -123,14 +123,22 @@ header {
   position: relative;
 }
 .drop_down img {
-  width: 100%;
+  width: 1349px;
+  height: 300px;
   margin: 0 auto;
   display: block;
 }
 .drop_down .big_img {
+  width: 100%;
   height: 300px;
+  overflow: hidden;
 }
 .drop_down .small_img {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+.drop_down .small_img img {
   height: 50px;
 }
 .drop_down span {
@@ -352,10 +360,45 @@ header {
 .banner ul .red_action {
   background: #eb3b4a;
 }
+.banner span {
+  width: 66px;
+  display: block;
+  height: 66px;
+  position: absolute;
+  opacity: .0;
+  filter: alpha(opacity=0);
+  background-repeat: no-repeat;
+  top: 50%;
+  margin-top: -35px;
+  z-index: 10;
+  -webkit-transition: -webkit-opacity 500ms ease-out;
+  -moz-transition: -moz-opacity 500ms ease-out;
+  -o-transition: -o-opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  z-index: 4;
+}
+.banner .ban_left {
+  left: 50%;
+  margin-left: -600px;
+  background: url(../img/new_focus_prev.png) no-repeat 0px 0px;
+  background-position: 0 0;
+}
+.banner .ban_right {
+  right: 50%;
+  margin-right: -600px;
+  background: url(../img/new_focus_next.png) no-repeat 0px 0px;
+  background-position: 0 0;
+}
+.banner:hover span {
+  opacity: 0.7;
+}
 
 .render_all {
   width: 1200px;
   margin: 0 auto;
+}
+.render_all .adver_botoom {
+  margin: 20px 0;
 }
 .render_all .adver_top {
   margin-top: 40px;
@@ -589,6 +632,9 @@ header {
   color: #ee394b;
   padding-left: 10px;
   float: right;
+}
+.today_sale .adver_botoom {
+  margin: 15px 0;
 }
 
 .back_top {
