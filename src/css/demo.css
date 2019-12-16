@@ -360,16 +360,16 @@ header {
 .render_all .adver_top {
   margin-top: 40px;
 }
-.render_all .section_one .section_top, .render_all .section_two .section_top, .render_all .section_three .section_top {
+.render_all .section_one .section_top, .render_all .section_two .section_top {
   height: 36px;
   margin: 50px 0 15px 0;
 }
-.render_all .section_one .section_top img, .render_all .section_two .section_top img, .render_all .section_three .section_top img {
+.render_all .section_one .section_top img, .render_all .section_two .section_top img {
   float: left;
   width: 36px;
   height: 36px;
 }
-.render_all .section_one .section_top h3, .render_all .section_two .section_top h3, .render_all .section_three .section_top h3 {
+.render_all .section_one .section_top h3, .render_all .section_two .section_top h3 {
   vertical-align: middle;
   line-height: 36px;
   margin: 0 10px;
@@ -378,7 +378,7 @@ header {
   float: left;
   font-weight: 100;
 }
-.render_all .section_one .section_top p, .render_all .section_two .section_top p, .render_all .section_three .section_top p {
+.render_all .section_one .section_top p, .render_all .section_two .section_top p {
   width: 160px;
   height: 20px;
   float: left;
@@ -387,15 +387,15 @@ header {
   text-align: center;
   color: #c2c2c2;
 }
-.render_all .section_one .section_top span, .render_all .section_two .section_top span, .render_all .section_three .section_top span {
+.render_all .section_one .section_top span, .render_all .section_two .section_top span {
   float: right;
   margin-top: 15px;
   font-size: 14px;
 }
-.render_all .section_one .section_top a, .render_all .section_two .section_top a, .render_all .section_three .section_top a {
+.render_all .section_one .section_top a, .render_all .section_two .section_top a {
   color: #666;
 }
-.render_all .section_one .section_top a:hover, .render_all .section_two .section_top a:hover, .render_all .section_three .section_top a:hover {
+.render_all .section_one .section_top a:hover, .render_all .section_two .section_top a:hover {
   color: red;
 }
 
@@ -464,7 +464,7 @@ header {
 .day_selected p:nth-child(4) span:nth-child(2) {
   float: right;
   margin-right: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .today_sale {
@@ -507,20 +507,214 @@ header {
   height: 290px;
 }
 .today_sale .shop_rightone {
-  height: 500px;
   width: 340px;
   float: right;
-  overflow: hidden;
   margin-bottom: 20px;
-  background: blue;
 }
-.today_sale .shop_righttwo {
-  height: 500px;
-  width: 340px;
-  float: right;
+.today_sale .shop_rightone .hot_title {
+  width: 100%;
+  background: url(../img/nav_tint_redbg.png) no-repeat;
+  height: 50px;
+  line-height: 50px;
+}
+.today_sale .shop_rightone h4 {
+  background: url(../img/good_hot_redranking.png) no-repeat 10px 50%;
+  font-size: 21px;
+  color: #333;
+  display: inline-block;
+  text-indent: 40px;
+  width: 290px;
+}
+.today_sale .shop_rightone ul {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+.today_sale .shop_rightone ul li {
+  width: 100%;
+  height: 110px;
+}
+.today_sale .shop_rightone ul img {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  float: left;
+}
+.today_sale .shop_rightone ul div {
+  float: left;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  position: relative;
+  height: 110px;
+  width: 200px;
+  margin-left: 10px;
+  padding-top: 15px;
+}
+.today_sale .shop_rightone ul p:nth-child(1) {
+  background: url(../img/hot_first.png) no-repeat;
+  width: 57px;
+  height: 20px;
+}
+.today_sale .shop_rightone ul p:nth-child(2) {
+  width: 100%;
+  font-size: 14px;
+  color: #777;
+  white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 20px;
-  background: yellow;
+  text-overflow: ellipsis;
+  line-height: 14px;
+  margin-top: 10px;
+}
+.today_sale .shop_rightone ul p:nth-child(3) {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  line-height: 18px;
+}
+.today_sale .shop_rightone ul span:nth-child(1) {
+  font-size: 18px;
+  color: #ee394b;
+  display: inline-block;
+  float: left;
+}
+.today_sale .shop_rightone ul span:nth-child(2) {
+  font-size: 12px;
+  color: #999;
+  float: left;
+  margin-left: 85px;
+}
+.today_sale .shop_rightone ul span:nth-child(3) {
+  font-size: 12px;
+  color: #ee394b;
+  padding-left: 10px;
+  float: right;
+}
+
+.back_top {
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  position: fixed;
+  z-index: 10;
+  width: 36px;
+  margin-left: 3px;
+  height: 82px;
+  left: 1284.5px;
+  bottom: 20px;
+  display: block;
+}
+.back_top .feedback {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/baseRedScrollBar.png) 0px 164px;
+  cursor: pointer;
+}
+.back_top .baseToTop {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/baseRedScrollBar.png) 0 35px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 50px;
+}
+footer a {
+  color: black;
+}
+footer .footer_icons_List:first-child {
+  height: 138px;
+}
+footer .footer_icons_List {
+  width: 1200px;
+  margin: 0 auto;
+  height: 185px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+footer .iconbox {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+footer .iconbox .iconImg {
+  width: 70px;
+  height: 70px;
+  margin: 34px 0 34px 43px;
+  float: left;
+}
+footer .iconbox .iconImg img {
+  vertical-align: middle;
+}
+footer .iconbox .iconText {
+  margin-left: 18px;
+  float: left;
+  margin-top: 48px;
+  color: #777;
+  font-size: 12px;
+}
+footer .iconbox p:first-child {
+  margin-bottom: 6px;
+}
+footer .mod_footer_links {
+  font-size: 12px;
+  margin: 0;
+  padding-bottom: 36px;
+  position: relative;
+  background: #f5f5f5;
+  height: 100px;
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .ftcont {
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .ftcont a:hover, footer .ftcont a:active {
+  text-decoration: none;
+  color: #ee394b;
+}
+footer .ftList li {
+  margin-right: 55px;
+  display: inline;
+  float: left;
+  margin-right: 5px;
+}
+footer .mb10 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+footer a {
+  color: #777;
+}
+footer .clearfix {
+  color: #333;
+}
+footer .ml30 {
+  margin-left: 30px;
+}
+footer .tc {
+  text-align: center;
+}
+footer .qypage-1200 .ftList li {
+  margin-right: 55px;
+}
+footer .mod_footer_links .ftList li {
+  display: inline;
+  float: left;
+  margin-right: 5px;
+}
+footer .mb10 {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=demo.css.map */

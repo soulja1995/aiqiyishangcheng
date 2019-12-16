@@ -1,0 +1,26 @@
+.back_top{
+        font-family: "\5FAE\8F6F\96C5\9ED1";
+        position: fixed;
+        z-index: 10;
+        width: 36px;
+        margin-left: 3px;
+        height: 82px;
+        left: 1284.5px;
+        bottom: 20px;
+        display: block;
+     .feedback {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url(../img/baseRedScrollBar.png)0px 164px;
+        cursor: pointer;
+    }
+    .baseToTop {
+        display: block;
+        width: 36px;
+        height: 36px;
+        background: url(../img/baseRedScrollBar.png) 0 35px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}
