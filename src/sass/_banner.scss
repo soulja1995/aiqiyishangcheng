@@ -7,10 +7,11 @@
         position: absolute;
         top: 0;
         left: 0;
-        display: none;
+        opacity: .0;
     }
     .img_action{
-        display: block;
+        opacity: 1;
+        transition: opacity .6s;
     }
     ul{
         position: absolute;
@@ -33,7 +34,7 @@
             background: #eb3b4a;
         }
     }
-    span{
+    a{
         width: 66px;
         display: block;
         height: 66px;
@@ -49,6 +50,7 @@
         -o-transition: -o-opacity 500ms ease-out;
         transition: opacity 500ms ease-out;
         z-index: 4;
+        
     }
     .ban_left{
         left: 50%;
@@ -62,7 +64,7 @@
         background: url(../img/new_focus_next.png) no-repeat 0px 0px;
         background-position: 0 0;
     }
-    &:hover span{
+    &:hover a{
         opacity : .7
     }
 }

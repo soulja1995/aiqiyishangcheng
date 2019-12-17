@@ -1,4 +1,4 @@
-import { Func_group } from "./func_group.js";//导入工具组
+; import { Func_group } from "./func_group.js";//导入工具组
 var group = new Func_group();
 class Loadanimat {
     constructor() {
@@ -12,22 +12,42 @@ class Loadanimat {
         this.glasses = group.$('.glasses');
         this.img_cut = group.$('.img_cut');
         this.ad_cut = group.$('.ad_cut');
+        //轮播图效果元素
+        this.img_banner = group.$('.banner')
+        this.aimg = group.$('.banner img', 'all');
+        this.ali = group.$('.banner li', 'all');
+        this.left = group.$('.ban_left');
+        this.right = group.$('.ban_right');
+        this.index = 0
+        //回到顶部效果元素
+        this.back = group.$('.back_top');
+        this.top = group.$('.to_top')
     }
     init() {
         //进入页面的动画效果
         this.off.style.display = "block";
         this.simg.style.display = "none";
         let _this = this;
-        this.off_click();
-        this.open_click();
         setTimeout(function () {//添加延时定时器
             _this.bimg_off()//效果运行
         }, 5000)//动画效果结束
+        this.off_click();
+        this.open_click();
 
         //页面右方小切换效果
         this.img_change();
         this.img_autochange();
         this.img_chickchange();
+
+        //轮播图效果
+        this.banner();
+        this.right_click();
+        this.left_click();
+        this.auto_banner();
+
+        //回到顶部效果
+        this.back_top();
+
     }
     bimg_off() {//加载完成之后效果
         let time = setInterval(() => {
@@ -64,6 +84,7 @@ class Loadanimat {
             this.bimg_off();
         }
     }
+
     //切换小图片效果
     img_change() {
         let visone = window.getComputedStyle(this.lighter).display;
@@ -96,6 +117,114 @@ class Loadanimat {
             this.img_change();//运行切换函数
         }
     }
+
+    //轮播图效果
+    banner() {
+        //红点效果
+        for (let i = 0; i < this.ali.length; i++) {
+            this.ali[i].onmouseover = () => {
+                for (let j = 0; j < this.ali.length; j++) {
+                    this.ali[j].className = '';
+                    if (this.aimg[j].className != '') {
+                        this.ali[j].className = 'red_action';
+                    }
+                }
+                this.ali[i].className = 'red_action';
+                this.ali[i].onmouseout = () => {
+                    this.ali[i].className = '';
+                    if (this.aimg[i].className != '') {
+                        this.ali[i].className = 'red_action';
+                    }
+                }
+            }
+            //点击切换效果运行点击函数
+            this.ali[i].onclick = () => {
+                this.ban_click(i);
+            }
+        }
+    }
+    // 点击li切换
+    ban_click(i) {
+        for (let i = 0; i < this.ali.length; i++) {
+            this.aimg[i].className = '';
+            this.ali[i].className = '';
+        }
+        this.ali[i].className = 'red_action';
+        this.aimg[i].className = 'img_action';
+        this.index = i
+        console.log(this.index);
+    }
+    //切换效果
+    right_change() {
+        for (let i = 0; i < this.ali.length; i++) {
+            this.ali[i].className = '';
+            this.aimg[i].className = '';
+        }
+        if (this.index < 7) {
+            this.ali[this.index + 1].className = 'red_action';
+            this.aimg[this.index + 1].className = 'img_action';
+            this.index++;
+        } else {
+            this.index = 0
+            this.ali[this.index].className = 'red_action';
+            this.aimg[this.index].className = 'img_action';
+        }
+    }
+    //点击左右按钮切换
+    right_click() {
+        this.right.onclick = () => {
+            this.right_change();
+        }
+    }
+    //左切换
+    left_click() {
+        this.left.onclick = () => {
+            for (let i = 0; i < this.ali.length; i++) {
+                this.ali[i].className = '';
+                this.aimg[i].className = '';
+            }
+            if (this.index > 0) {
+                this.ali[this.index - 1].className = 'red_action';
+                this.aimg[this.index - 1].className = 'img_action';
+                this.index--
+            } else {
+                this.index = 7;
+                this.ali[this.index].className = 'red_action';
+                this.aimg[this.index].className = 'img_action';
+            }
+        }
+    }
+    // 自动轮播
+    auto_banner() {
+        let time = setInterval(() => {
+            this.right_change()
+        }, 4000);
+    }
+    
+    // 回到顶部效果
+    back_top() {
+        window.onscroll = () => {
+            let the_top = document.documentElement.scrollTop;
+            if (the_top > 0) {
+                this.back.style.display = 'block';
+            } else {
+                this.back.style.display = 'none';
+            }
+        }
+        //点击回到顶部
+        this.top.onclick = () => {
+            let time=setInterval(() => {
+                let the_top=document.documentElement.scrollTop;
+                document.documentElement.scrollTop=the_top-300;
+                if(the_top<=0){
+                    clearInterval(time);
+                }
+            }, 1000/60)
+            
+        }
+    }
+
+
 }
 export {
     Loadanimat
