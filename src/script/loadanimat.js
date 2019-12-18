@@ -23,6 +23,7 @@ class Loadanimat {
         this.back = group.$('.back_top');
         this.top = group.$('.to_top')
     }
+    //进入页面动画效果
     init() {
         //进入页面的动画效果
         this.off.style.display = "block";

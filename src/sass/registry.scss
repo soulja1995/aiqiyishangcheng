@@ -1,0 +1,115 @@
+// 模仿百度智能云登录
+html, body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+}
+a{
+    text-decoration: none;
+}
+.main {
+    position: relative;
+    height: 800px;
+    header {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(23, 23, 23, .35);
+        background-color: rgb(23, 23, 23) \9;
+        z-index: 1000;
+        a{
+            color: #5aa700;
+        }
+        .container {
+            width: 980px;
+            height: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            .right {
+                float: right;
+            }
+        }
+    }
+    .brand {
+        height: 213px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        padding-top: 124px;
+        background: url(https://cdn.bdstatic.com/login/bg-1920x1080.png@q_90) no-repeat;
+        h2 {
+            text-align: center;
+            color: #5aa700;
+            font-size: 32px;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
+}
+.reg-form {
+    position: relative;
+    z-index: 2000;
+    width: 835px;
+    font-size: 14px;
+    margin: 0 auto;
+    top: 252px;
+    padding: 10px 20px 50px;
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.09);
+    label{
+        display: none;
+        margin-top: 10px;
+    }
+    .login-tip {
+        text-align: right;
+        color: #666;
+        width: 417px;
+        margin: 0 auto;
+        font-size: 16px;
+        a{
+            color: #5aa700;
+        }
+    }
+    .san-form {
+        width: 417px;
+        margin: 0 auto;
+    }
+    .san-form-item {
+        margin: 15px 0;
+        position: relative;
+    }
+    input[type="text"],input[type="password"] {
+        height: 38px;
+        width: 402px;
+        padding-left: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+    }
+    .san-form-item-verifyCode input {
+        width: 255px;
+    }
+    .btn-light {
+        color: #51a0f0;
+        background-color: #e8f5fd;
+        width: 135px;
+        height: 41px;
+        border: none;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .submit[disabled] {
+        background-color: #5aa700;
+        color: #fff;
+    }
+    .submit {
+        width: 416px;
+        height: 42px;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+    }
+}

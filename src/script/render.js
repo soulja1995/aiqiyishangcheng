@@ -7,6 +7,7 @@ class Render {
     init() {
         this.demo_render();
     }
+    //主页渲染
     demo_render() {
         let _this = this;
         group.ajax({
