@@ -101,15 +101,14 @@ a{
         font-size: 14px;
         margin-left: 10px;
     }
-    .submit[disabled] {
-        background-color: #5aa700;
-        color: #fff;
-    }
     .submit {
         width: 416px;
         height: 42px;
         color: #fff;
         border: none;
         font-size: 16px;
+        cursor: pointer;
+        background-color: #5aa700;
+        color: #fff;
     }
 }
